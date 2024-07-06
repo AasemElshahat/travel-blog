@@ -509,20 +509,6 @@ h6 {
   margin-top: 20px;
 }
 
-.table-section {
-  padding: 60px 0;
-}
-.table-section table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.table-section table th,
-.table-section table td {
-  padding: 15px;
-  text-align: left;
-  border: 1px solid #ccc;
-}
-
 .scroll-section {
   display: flex;
   justify-content: center;
@@ -602,66 +588,54 @@ h6 {
   font-size: 16px;
 }
 
-.destination-table {
+.table-section {
   padding: 60px 0;
-  background-color: #f6f6f6;
 }
-.destination-table .container {
-  max-width: 100%;
-}
-.destination-table table {
+.table-section table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
 }
-.destination-table table th,
-.destination-table table td {
-  padding: 15px;
+.table-section th,
+.table-section td {
+  padding: 1rem;
   text-align: left;
   border: 1px solid #ccc;
 }
-.destination-table table th {
+.table-section th {
   background-color: #2c4755;
   color: #fff;
 }
-.destination-table table td {
+.table-section td {
   background-color: #f9f9f9;
 }
-.destination-table table td:hover {
+.table-section td:hover {
   background-color: #e0e0e0;
 }
-.destination-table table tbody tr:nth-child(even) td {
+.table-section tbody tr:nth-child(even) td {
   background-color: #ececec;
 }
 @media (max-width: 767px) {
-  .destination-table table,
-  .destination-table th,
-  .destination-table td {
-    display: block;
-    width: 100%;
+  .table-section {
+    /* Specific styling for columns to fit content */
   }
-  .destination-table thead {
-    display: none;
+  .table-section th,
+  .table-section td {
+    padding: 0.5rem; /* Reduce padding */
+    font-size: 1rem; /* Adjust font size */
   }
-  .destination-table tr {
-    margin-bottom: 15px;
-    display: block;
-    border-bottom: 2px solid #ddd;
+  .table-section th {
+    font-size: 0.8rem; /* Adjust font size for headers */
   }
-  .destination-table td {
-    text-align: right;
-    padding-left: 50%;
-    position: relative;
+  .table-section td {
+    font-size: 0.8rem; /* Adjust font size for data cells */
   }
-  .destination-table td:before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 50%;
-    padding-left: 15px;
-    font-weight: bold;
-    text-align: left;
-    background-color: #f9f9f9;
+  .table-section table {
+    table-layout: fixed; /* Ensure table layout adjusts */
+    word-wrap: break-word; /* Allow text to wrap within cells */
+  }
+  .table-section th,
+  .table-section td {
+    white-space: normal; /* Allow text to wrap */
   }
 }
 
