@@ -1,0 +1,13 @@
+// Import variables and mixins first
+@import "variables";
+@import "mixins";
+
+// Import base styles
+@import "base";
+
+// Import layout styles
+@import "layout";
+
+// Import component styles
+@import "components";
+@import "animations";
