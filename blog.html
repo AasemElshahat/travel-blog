@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - IO</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <div class="header">
+      <div class="container">
+        <button id="back-to-top" title="Back to top">↑</button>
+        <a href="index.html"
+          ><img class="logo" src="images/logo.png" alt="Logo"
+        /></a>
+        <div class="links">
+          <span class="icon"><span></span><span></span><span></span></span>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start Landing Section -->
+    <div
+      class="landing bottom-left intro-text"
+      style="background-image: url('../images/blog.jpg')"
+    >
+      <div class="overlay"></div>
+      <!-- overlay -->
+      <div class="intro-text">
+        <h2>Blog</h2>
+      </div>
+    </div>
+    <!-- End Landing Section -->
+
+    <!-- Start Blog Section -->
+    <section class="blog">
+      <div class="container">
+        <h1 class="special-heading">Blog</h1>
+        <p>Discover travel tips, guides, and more from our adventures</p>
+
+        <div class="blog-content">
+          <!-- Section: Inspiration -->
+          <div class="blog-section">
+            <h2>Inspiration</h2>
+            <hr />
+            <ul>
+              <li><a href="#">Best places to visit in 2024</a></li>
+              <li><a href="#">Best road trips in the world</a></li>
+            </ul>
+          </div>
+          <!-- Section: Europe -->
+          <div class="blog-section">
+            <h2>Europe</h2>
+            <hr />
+            <h3>Austria Guides</h3>
+            <ul>
+              <li><a href="#">Things to do in Vienna</a></li>
+              <li><a href="#">Summer in the Alps</a></li>
+            </ul>
+            <h3>Belgium Guides</h3>
+            <ul>
+              <li><a href="#">Things to do in Antwerp</a></li>
+              <li><a href="#">Things to do in Mechelen</a></li>
+              <li><a href="#">Things to do in Leuven</a></li>
+            </ul>
+            <h3>France Guides</h3>
+            <ul>
+              <li><a href="#">A Perfect Weekend in Paris</a></li>
+              <li><a href="#">Exploring the French Riviera</a></li>
+            </ul>
+            <h3>Italy Guides</h3>
+            <ul>
+              <li><a href="#">Top 10 Places to Visit in Rome</a></li>
+              <li><a href="#">A Food Lover’s Guide to Italy</a></li>
+            </ul>
+            <h3>Spain Guides</h3>
+            <ul>
+              <li><a href="#">Best Things to Do in Barcelona</a></li>
+              <li><a href="#">Discovering the Beauty of Madrid</a></li>
+            </ul>
+          </div>
+          <!-- Section: Asia -->
+          <div class="blog-section">
+            <h2>Asia</h2>
+            <hr />
+            <h3>Japan Guides</h3>
+            <ul>
+              <li><a href="#">Top 10 Experiences in Tokyo</a></li>
+              <li><a href="#">Exploring the Temples of Kyoto</a></li>
+            </ul>
+            <h3>Thailand Guides</h3>
+            <ul>
+              <li><a href="#">A Complete Guide to Bangkok</a></li>
+              <li><a href="#">Island Hopping in Thailand</a></li>
+            </ul>
+          </div>
+          <!-- Section: North America -->
+          <div class="blog-section">
+            <h2>North America</h2>
+            <hr />
+            <h3>USA Guides</h3>
+            <ul>
+              <li><a href="#">Exploring the National Parks of the USA</a></li>
+              <li>
+                <a href="#">A Road Trip Along the Pacific Coast Highway</a>
+              </li>
+            </ul>
+            <h3>Canada Guides</h3>
+            <ul>
+              <li><a href="#">The Best of Banff National Park</a></li>
+              <li><a href="#">City Guide: Toronto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Blog Section -->
+
+    <!-- Start Subscribe Form Section -->
+    <section
+      class="subscribe-form"
+      role="region"
+      aria-labelledby="subscribe-form-heading"
+    >
+      <div class="container">
+        <h2 id="subscribe-form-heading" class="special-heading">Subscribe</h2>
+        <p>Subscribe to our News Letter</p>
+        <form action="submit_form.php" method="POST">
+          <div>
+            <label for="email">Your Email:</label>
+            <input
+              placeholder="Email"
+              type="email"
+              id="email"
+              name="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Please enter a valid email address."
+            />
+          </div>
+          <div>
+            <label for="name">Your Name:</label>
+            <input
+              placeholder="Full Name"
+              type="text"
+              id="name"
+              name="name"
+              required
+              pattern="[a-zA-Z\s]+"
+              title="Name should only contain letters and spaces."
+            />
+          </div>
+          <button type="submit">Subscribe</button>
+          <div id="formFeedback" class="feedback"></div>
+        </form>
+      </div>
+    </section>
+    <!-- End Subscribe Form Section -->
+
+    <!-- Start Footer -->
+    <div class="footer">&copy; 2021 <span>Leon</span> All Right Reserved</div>
+    <!-- End Footer -->
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

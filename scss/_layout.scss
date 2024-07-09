@@ -10,11 +10,21 @@
   z-index: 1000;
   background-color: transparent;
   transition: background-color 0.3s, box-shadow 0.3s;
+  color: rgba(255, 255, 255, 0.8); // White shade when still
   box-shadow: none;
 
   &.scrolled {
     background-color: #ffffff; // Set to white when scrolled
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optional: add a subtle shadow for better visibility
+    .links {
+      ul {
+        li {
+          a {
+            color: rgba(0, 0, 0, 0.8); // Black shade when scrolled
+          }
+        }
+      }
+    }
   }
 
   .container {
@@ -66,8 +76,8 @@
           display: block;
           padding: 15px;
           text-decoration: none;
-          color: #333;
-          transition: $main-duration;
+          color: rgba(255, 255, 255, 0.8); // White shade when still
+          transition: color 0.3s;
 
           &:hover {
             color: $main-color; // Optional: change color on hover
@@ -120,10 +130,18 @@
     .links {
       .icon {
         display: flex; // Show the icon on mobile view
+        span {
+          color: rgba(255, 255, 255, 0.8); // White shade when still
+        }
       }
 
       ul {
         display: none; // Hide links initially
+        li {
+          a {
+            color: rgba(0, 0, 0, 0.8); // Black shade when scrolled
+          }
+        }
       }
 
       .toggle-button {
@@ -176,6 +194,20 @@
     p {
       font-size: 19px;
       line-height: 1.8;
+    }
+  }
+  &.bottom-left {
+    .intro-text {
+      left: 20%;
+      bottom: 15%;
+      top: auto;
+      transform: none;
+      text-align: left;
+
+      h2 {
+        font-size: 2rem;
+        // color: $main-color;
+      }
     }
   }
 }

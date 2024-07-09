@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navMenu = document.querySelector(".header .links ul");
 
   window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 0) {
       header.classList.add("scrolled");
     } else {
       header.classList.remove("scrolled");
@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Back-To-Top
-
 document.addEventListener("DOMContentLoaded", function () {
   const backToTopButton = document.getElementById("back-to-top");
 

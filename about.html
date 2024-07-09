@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | IO</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <div class="header">
+      <div class="container">
+        <button id="back-to-top" title="Back to top">↑</button>
+        <a href="index.html"
+          ><img class="logo" src="images/logo.png" alt="Logo"
+        /></a>
+        <div class="links">
+          <span class="icon"><span></span><span></span><span></span></span>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start Landing Section -->
+    <div
+      class="landing about-landing bottom-left"
+      style="background-image: url('../images/about.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="intro-text">
+        <h2>About</h2>
+      </div>
+    </div>
+    <!-- End Landing Section -->
+
+    <!-- Start About Section -->
+    <section class="about">
+      <div class="container">
+        <h2 class="special-heading">Our Story</h2>
+        <p>Discover who we are, what we do, and why we do it.</p>
+
+        <div class="about-content">
+          <div class="text">
+            <p>
+              We are passionate travelers who have been exploring the world
+              together for over a decade. Our journey began with a shared love
+              for discovering new cultures, landscapes, and experiences. Over
+              the years, we have visited countless destinations, always seeking
+              out the hidden gems and unique adventures that each place has to
+              offer.
+            </p>
+            <p>
+              Our mission is to inspire others to embark on their own adventures
+              and to make travel more accessible, enjoyable, and enriching. We
+              believe that travel has the power to broaden horizons, build
+              connections, and create lasting memories.
+            </p>
+            <p>
+              Join us as we continue to explore the world, share our stories,
+              and offer tips and guides to help you make the most of your
+              travels.
+            </p>
+          </div>
+          <dir class="image"></dir>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Start Values Section -->
+    <section class="values">
+      <div class="container">
+        <h2 class="special-heading">Our Values</h2>
+        <p>What drives us and guides our journey.</p>
+
+        <div class="values-content">
+          <div class="value">
+            <h3>Adventure</h3>
+            <p>
+              We believe in embracing the unknown and seeking out new
+              experiences.
+            </p>
+          </div>
+          <div class="value">
+            <h3>Connection</h3>
+            <p>
+              We value the connections we make with people and places along our
+              journey.
+            </p>
+          </div>
+          <div class="value">
+            <h3>Respect</h3>
+            <p>
+              We strive to travel responsibly and respect the cultures and
+              environments we encounter.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Values Section -->
+
+    <!-- Start Subscribe Form Section -->
+    <section
+      class="subscribe-form"
+      role="region"
+      aria-labelledby="subscribe-form-heading"
+    >
+      <div class="container">
+        <h2 id="subscribe-form-heading" class="special-heading">Subscribe</h2>
+        <p>Subscribe to our News Letter</p>
+        <form action="submit_form.php" method="POST">
+          <div>
+            <label for="email">Your Email:</label>
+            <input
+              placeholder="Email"
+              type="email"
+              id="email"
+              name="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Please enter a valid email address."
+            />
+          </div>
+          <div>
+            <label for="name">Your Name:</label>
+            <input
+              placeholder="Full Name"
+              type="text"
+              id="name"
+              name="name"
+              required
+              pattern="[a-zA-Z\s]+"
+              title="Name should only contain letters and spaces."
+            />
+          </div>
+          <button type="submit">Subscribe</button>
+          <div id="formFeedback" class="feedback"></div>
+        </form>
+      </div>
+    </section>
+    <!-- End Subscribe Form Section -->
+
+    <!-- Start Footer -->
+    <div class="footer">&copy; 2021 <span>Leon</span> All Right Reserved</div>
+    <!-- End Footer -->
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

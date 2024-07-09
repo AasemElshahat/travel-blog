@@ -26,8 +26,9 @@
     <div class="header">
       <div class="container">
         <button id="back-to-top" title="Back to top">↑</button>
-
-        <img class="logo" src="images/logo.png" alt="Logo" />
+        <a href="index.html"
+          ><img class="logo" src="images/logo.png" alt="Logo"
+        /></a>
         <div class="links">
           <span class="icon">
             <span></span>
@@ -36,9 +37,8 @@
           </span>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="explore.html">Explore</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -64,7 +64,7 @@
       aria-labelledby="featured-post-heading"
     >
       <div class="container">
-        <div class="feat reveal reveal-delay-1">
+        <div class="fade-in">
           <article class="feat">
             <img
               class="image-content"
@@ -73,12 +73,9 @@
             />
             <div class="text-content">
               <h2 id="featured-post-heading">Welcome</h2>
-              <p>Less is more work</p>
-              <div class="image"></div>
               <p>
-                Anywhere We Roam is a resource to help you travel better,
-                featuring epic road trips, stunning hiking destinations, and our
-                favourite cities.
+                IO is a resource to help you travel better, featuring epic road
+                trips, stunning hiking destinations, and our favourite cities.
               </p>
             </div>
           </article>
@@ -92,41 +89,43 @@
     <!-- Start Inspiration Posts -->
     <section class="inspiration">
       <div class="container">
-        <header class="inspiration-header">
-          <h2 class="special-heading">inspiration</h2>
-          <p>Find some inspiration for your next big getaway</p>
-        </header>
-        <div class="inspiration-content">
-          <article class="inspiration-card">
-            <a href="#">
-              <img
-                src="images/uk-train.jpg"
-                alt="25 Best Places to Visit in The UK For Dramatic Scenery & Historic Charm"
-              />
-              <h3>
-                25 Best Places to Visit in The UK For Dramatic Scenery &
-                Historic Charm
-              </h3>
-            </a>
-          </article>
-          <article class="inspiration-card">
-            <a href="#">
-              <img
-                src="images/road-trip.jpg"
-                alt="Best Road Trips in The World For 2024"
-              />
-              <h3>Best Road Trips in The World For 2024</h3>
-            </a>
-          </article>
-          <article class="inspiration-card">
-            <a href="#">
-              <img
-                src="images/japan2.jpg"
-                alt="15 Exciting Places To Visit in 2024"
-              />
-              <h3>15 Exciting Places To Visit in 2024</h3>
-            </a>
-          </article>
+        <div class="zoom-in">
+          <header class="inspiration-header">
+            <h2 class="special-heading">inspiration</h2>
+            <p>Find some inspiration for your next big getaway</p>
+          </header>
+          <div class="inspiration-content">
+            <article class="inspiration-card">
+              <a href="#">
+                <img
+                  src="images/uk-train.jpg"
+                  alt="25 Best Places to Visit in The UK For Dramatic Scenery & Historic Charm"
+                />
+                <h3>
+                  25 Best Places to Visit in The UK For Dramatic Scenery &
+                  Historic Charm
+                </h3>
+              </a>
+            </article>
+            <article class="inspiration-card">
+              <a href="#">
+                <img
+                  src="images/road-trip.jpg"
+                  alt="Best Road Trips in The World For 2024"
+                />
+                <h3>Best Road Trips in The World For 2024</h3>
+              </a>
+            </article>
+            <article class="inspiration-card">
+              <a href="#">
+                <img
+                  src="images/japan2.jpg"
+                  alt="15 Exciting Places To Visit in 2024"
+                />
+                <h3>15 Exciting Places To Visit in 2024</h3>
+              </a>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -183,17 +182,16 @@
         <article class="post">
           <a href="#">
             <img
-              src="images/innsbruck.jpg"
+              src="images/dolomites.jpg"
               alt="9 Brilliant Day Hikes In The Dolomites"
             />
-            <div class="info">
-              <h3>9 Brilliant Day Hikes In The Dolomites</h3>
-            </div>
+
+            <h3>9 Brilliant Day Hikes In The Dolomites</h3>
           </a>
         </article>
         <article class="post">
           <a href="#">
-            <img src="images/featured.jpg" alt="Hiking Tre Cime di Lavaredo" />
+            <img src="images/hiking.jpg" alt="Hiking Tre Cime di Lavaredo" />
             <div class="info">
               <h3>Hiking Tre Cime di Lavaredo</h3>
             </div>
@@ -216,7 +214,7 @@
           <div class="feat slide-in-left">
             <article class="post">
               <a href="#">
-                <img src="images/dolomites-ice.jpg" alt="Dolomites Road Trip" />
+                <img src="images/road-trip.jpg" alt="Dolomites Road Trip" />
                 <h3>7-Day Dolomites Itinerary</h3>
               </a>
             </article>
@@ -224,7 +222,7 @@
           <div class="feat slide-in-right">
             <article class="post">
               <a href="#">
-                <img src="images/ocean-road.jpg" alt="Great Ocean Road" />
+                <img src="images/road.jpg" alt="Great Ocean Road" />
                 <div class="post-content">
                   <h3>Great Ocean Road Itinerary</h3>
                 </div>
@@ -297,7 +295,7 @@
     </section>
     <!-- End Destination Overview Table Section -->
 
-    <!-- Start About -->
+    <!-- Start Next -->
     <section class="about" role="region" aria-labelledby="about-heading">
       <div class="container">
         <h2 id="about-heading" class="special-heading">Next</h2>
@@ -315,22 +313,18 @@
             </p>
             <p>
               Otherwise, just have a click around. Our
-              <a href="explore.html">explore</a> page is a good place to start,
-              or, if you know where you’d like to go, check out our
-              <a href="places.html">places</a> page.
+              <a href="explore.html">explore</a> page is a good place to start.
             </p>
             <hr />
             <p>
               If you are ready to start booking your next trip, head over to our
-              <a href="resources.html">resources</a> page for some helpful
-              links.
+              <a href="blog.html">blog</a> page for some helpful links.
             </p>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- End About -->
+    <!-- End Next -->
 
     <!-- Start Subscribe Form Section -->
     <section
@@ -373,26 +367,6 @@
     </section>
     <!-- End Subscribe Form Section -->
 
-    <!-- Start Contact -->
-    <div class="contact">
-      <div class="container">
-        <h2 class="special-heading">Contact</h2>
-        <p>We are born to create</p>
-        <div class="info">
-          <p class="label">Feel free to drop us a line at:</p>
-          <a href="mailto:leonagency@mail.com?subject=Contact" class="link"
-            >leonagency@mail.com</a
-          >
-          <div class="social">
-            Find Us On Social Networks
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Contact -->
     <!-- Start Footer -->
     <div class="footer">&copy; 2021 <span>Leon</span> All Right Reserved</div>
     <!-- End Footer -->
