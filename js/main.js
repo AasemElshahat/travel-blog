@@ -53,18 +53,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const backToTopButton = document.getElementById("back-to-top");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 100) {
       backToTopButton.classList.add("visible");
+      backToTopButton.classList.add("bounce");
     } else {
       backToTopButton.classList.remove("visible");
+      backToTopButton.classList.remove("bounce");
     }
   });
 
   backToTopButton.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
   // Intersection Observer for scroll animations

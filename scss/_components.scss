@@ -232,6 +232,7 @@
       @media (max-width: 991px) {
         text-align: center;
         flex-basis: 100%;
+        max-width: 100% !important;
       }
     }
   }
