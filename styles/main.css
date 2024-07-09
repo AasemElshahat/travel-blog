@@ -178,6 +178,9 @@ h6 {
   .header .links ul {
     display: none;
   }
+  .header .links .toggle-button {
+    display: block;
+  }
 }
 
 .landing {
@@ -193,6 +196,11 @@ h6 {
   justify-content: center;
   background-attachment: fixed;
 }
+.landing .overlay {
+  background-color: rgba(0, 0, 0, 0.262745098);
+  width: 100%;
+  height: 100%;
+}
 .landing .intro-text {
   position: absolute;
   color: white;
@@ -205,9 +213,11 @@ h6 {
 }
 .landing .intro-text h1 {
   margin: 0;
-  font-weight: bold;
   font-size: 50px;
   color: #10cab7;
+}
+.landing .intro-text h1 span {
+  color: #24484f;
 }
 .landing .intro-text p {
   font-size: 19px;
@@ -306,69 +316,77 @@ h6 {
   font-size: 17px;
 }
 
-.portfolio {
+.inspiration {
   padding: 60px 0;
   background-color: #f6f6f6;
 }
-.portfolio .container {
+.inspiration .container {
   text-align: center;
 }
-.portfolio .container p {
+.inspiration .inspiration-header p {
   margin-bottom: 40px;
   font-size: 1.2rem;
   color: #666;
 }
-.portfolio .portfolio-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 30px;
-  margin-top: 80px;
+.inspiration .inspiration-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
 }
-.portfolio .portfolio-content .card {
+.inspiration .inspiration-card {
   position: relative;
   background-color: white;
   overflow: hidden;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 350px;
+  width: 100%;
+  height: 450px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.portfolio .portfolio-content .card:hover {
+.inspiration .inspiration-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-.portfolio .portfolio-content .card a {
+.inspiration .inspiration-card a {
   display: block;
   text-decoration: none;
   color: inherit;
+  height: 100%;
 }
-.portfolio .portfolio-content .card a img {
+.inspiration .inspiration-card a img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.3s ease;
-  filter: brightness(0.85); /* Darkens the image slightly */
+  filter: brightness(0.85);
 }
-.portfolio .portfolio-content .card a .info {
+.inspiration .inspiration-card a h3 {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent); /* Gradient shadow */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   color: white;
   padding: 20px;
   text-align: center;
+  margin: 0;
+  font-size: 1.1rem;
   transition: background 0.3s ease;
 }
-.portfolio .portfolio-content .card a .info h3 {
-  margin: 0;
-  font-size: 1.5rem;
+.inspiration .inspiration-card a:hover img {
+  transform: scale(1.05);
 }
-.portfolio .portfolio-content .card a .info p {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #ddd;
-}
-.portfolio .portfolio-content .card a:hover img {
-  transform: scale(1.1);
+@media (max-width: 768px) {
+  .inspiration .inspiration-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .inspiration .inspiration-card {
+    max-width: 100%;
+  }
 }
 
 .about {
@@ -410,6 +428,7 @@ h6 {
 }
 @media (max-width: 991px) {
   .about .about-content .image {
+    order: -1;
     margin: 0 auto 60px;
   }
   .about .about-content .image::before, .about .about-content .image::after {
@@ -433,10 +452,20 @@ h6 {
   line-height: 2;
   color: #777;
 }
+.about .about-content .text a {
+  text-decoration: none;
+}
 @media (max-width: 991px) {
   .about .about-content .text {
     text-align: center;
+    flex-basis: 100%;
   }
+}
+
+hr {
+  width: 80%;
+  display: inline-block;
+  border-color: #10cab7;
 }
 
 .contact {
@@ -658,7 +687,7 @@ h6 {
   transition: transform 0.3s ease;
 }
 .posts .post-grid .post:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .posts .post-grid .post a {
   display: block;
@@ -669,6 +698,7 @@ h6 {
   width: 100%;
   height: auto;
   display: block;
+  filter: brightness(0.85); /* Darkens the image slightly */
 }
 .posts .post-grid .post a .post-content {
   padding: 20px;
@@ -703,38 +733,47 @@ h6 {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  position: relative;
+  height: 400px;
 }
 .road-trips .post-grid .post:hover {
-  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .road-trips .post-grid .post a {
   display: block;
   text-decoration: none;
   color: inherit;
+  height: 100%;
 }
 .road-trips .post-grid .post a img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire area */
+  object-position: center; /* Centers the image */
+  transition: transform 0.3s ease;
+  filter: brightness(0.85); /* Darkens the image slightly */
 }
-.road-trips .post-grid .post a .post-content {
+.road-trips .post-grid .post a h3 {
   padding: 20px;
-  text-align: left;
-}
-.road-trips .post-grid .post a .post-content h3 {
   margin-top: 0;
   font-size: 1.5rem;
   color: #2c4755;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
 }
-.road-trips .post-grid .post a .post-content p {
-  color: #666;
-  margin-top: 10px;
-  font-size: 1rem;
+.road-trips .post-grid .post a:hover img {
+  transform: scale(1.1);
+}
+.road-trips .post-grid .post a:hover .info::before {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
 }
 
 .hiking-posts {
   padding: 60px 0;
-  background-color: #f6f6f6;
 }
 .hiking-posts .container {
   text-align: center;
@@ -765,7 +804,6 @@ h6 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .hiking-posts .post-grid .post:hover {
-  transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .hiking-posts .post-grid .post a {
@@ -778,6 +816,7 @@ h6 {
   height: auto;
   display: block;
   transition: transform 0.3s ease;
+  filter: brightness(0.85); /* Darkens the image slightly */
 }
 .hiking-posts .post-grid .post a .info {
   position: absolute;
@@ -792,6 +831,7 @@ h6 {
 .hiking-posts .post-grid .post a .info h3 {
   margin: 0;
   font-size: 1.5rem;
+  text-align: center;
 }
 .hiking-posts .post-grid .post a .info p {
   margin-top: 10px;
