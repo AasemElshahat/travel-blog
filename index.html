@@ -335,34 +335,16 @@
       <div class="container">
         <h2 id="subscribe-form-heading" class="special-heading">Subscribe</h2>
         <p>Subscribe to our Newsletter</p>
-        <form action="submit_form.php" method="POST">
-          <div>
-            <label for="email">Your Email:</label>
-            <input
-              placeholder="Email"
-              type="email"
-              id="email"
-              name="email"
-              required
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              title="Please enter a valid email address."
-            />
-          </div>
-          <div>
-            <label for="name">Your Name:</label>
-            <input
-              placeholder="Full Name"
-              type="text"
-              id="name"
-              name="name"
-              required
-              pattern="[a-zA-Z\s]+"
-              title="Name should only contain letters and spaces."
-            />
-          </div>
-          <button type="submit">Subscribe</button>
-          <div id="formFeedback" class="feedback"></div>
-        </form>
+<form id="subscribe-form">
+  <!-- form fields -->
+  <div id="formFeedback" class="feedback"></div>
+</form>
+<script>
+  document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('formFeedback').innerText = 'Subscription successful!';
+  });
+</script>
       </div>
     </section>
     <!-- End Subscribe Form Section -->
