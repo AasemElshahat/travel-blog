@@ -227,16 +227,15 @@ h6 {
 }
 
 .landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("../../images/airplane.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-attachment: fixed;
 }
 .landing .overlay {
@@ -925,15 +924,15 @@ hr {
 }
 
 .contact-landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-attachment: fixed;
 }
 .contact-landing .overlay {

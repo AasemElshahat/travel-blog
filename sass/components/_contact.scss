@@ -1,13 +1,11 @@
 .contact-landing {
+  @include flex-center;
   position: relative;
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-attachment: fixed;
 
   .overlay {

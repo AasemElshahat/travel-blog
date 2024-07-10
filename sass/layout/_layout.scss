@@ -152,16 +152,13 @@
 }
 
 .landing {
+  @include flex-center;
   position: relative;
   width: 100%;
   height: 100vh; // Full viewport height
-  background-image: url("../../images/airplane.jpg");
   background-size: cover; // Ensures the image covers the entire area without distortion
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-attachment: fixed;
 
   .overlay {

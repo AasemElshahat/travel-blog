@@ -5,29 +5,6 @@
   align-items: center;
 }
 
-@mixin responsive-grid($columns: 1fr 1fr) {
-  display: grid;
-  grid-template-columns: $columns;
-  gap: 20px;
-
-  @media (max-width: 991px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-@mixin box-shadow($x: 0, $y: 4px, $blur: 6px, $color: rgba(0, 0, 0, 0.1)) {
-  box-shadow: $x $y $blur $color;
-}
-
-@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
-  transition: $property $duration $timing;
-}
-
-
-@mixin gradient-bg($from: rgba(0, 0, 0, 0.7), $to: transparent) {
-  background: linear-gradient(to top, $from, $to);
-}
-
 @mixin container {
   padding: 0 15px;
   margin: 0 auto;
@@ -44,3 +21,29 @@
     width: 1170px;
   }
 }
+
+@mixin responsive-grid($columns: 1fr 1fr) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: 20px;
+
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@mixin box-shadow($x: 0, $y: 4px, $blur: 6px, $color: rgba(0, 0, 0, 0.1)) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+
+@mixin gradient-bg($from: rgba(0, 0, 0, 0.7), $to: transparent) {
+  background: linear-gradient(to top, $from, $to);
+}
+
+
