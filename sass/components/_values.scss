@@ -1,0 +1,45 @@
+.values {
+  padding: $section-padding 0;
+  background-color: $section-background;
+
+  .values-header {
+    text-align: center;
+    margin-bottom: 30px;
+
+    .special-heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+
+  .values-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .value {
+      flex: 1 1 30%;
+      margin-bottom: 20px;
+
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        padding-right: 5px;
+      }
+    }
+  }
+}

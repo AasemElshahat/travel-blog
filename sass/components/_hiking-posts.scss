@@ -1,0 +1,92 @@
+.hiking-posts {
+  padding: $section-padding 0;
+  // background-color: $section-background;
+
+  .container {
+    text-align: center;
+
+    .special-heading {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      color: $secondary-color;
+    }
+
+    p {
+      margin-bottom: 40px;
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+
+  .post-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0; // No gaps between the images
+
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+
+    .post {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        // transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: transform 0.3s ease;
+          // filter: brightness(0.85); /* Darkens the image slightly */
+        }
+
+        h3 {
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          padding: 20px;
+          text-align: center;
+          font-size: 1.3rem;
+          margin: 0;
+          color: rgba(255, 255, 255, 0.9); // White shade when still
+          font-weight: 400;
+
+          z-index: 2; // Ensure the text is above the gradient
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 50%; // Adjust the height as needed
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0)
+          );
+          z-index: 1; // Ensure the gradient is below the text but above the image
+        }
+
+        &:hover img {
+          transform: scale(1.1);
+        }
+
+        &:hover .info::before {
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        }
+      }
+    }
+  }
+}

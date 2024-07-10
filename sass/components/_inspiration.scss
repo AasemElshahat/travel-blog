@@ -1,0 +1,82 @@
+.inspiration {
+  text-align: center;
+  padding: $section-padding 0;
+  background-color: $section-background;
+
+  .inspiration-header {
+    p {
+      margin-bottom: 40px;
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+
+  .inspiration-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .inspiration-card {
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    width: 100%;
+    height: 450px; // Adjust this value as necessary to match the height in the screenshot
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        filter: brightness(0.85);
+      }
+
+      h3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin: 0;
+        font-size: 1.1rem;
+        transition: background 0.3s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .inspiration-content {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .inspiration-card {
+      max-width: 100%;
+    }
+  }
+}

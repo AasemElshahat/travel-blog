@@ -1,0 +1,125 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in,
+.slide-in-left,
+.slide-in-right,
+.slide-in-up,
+.zoom-in {
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in {
+  transform: translateY(20px);
+}
+
+.fade-in.in-view,
+.slide-in-left.in-view,
+.slide-in-right.in-view,
+.slide-in-up.in-view,
+.zoom-in.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+.slide-in-left {
+  transform: translateX(-50px);
+}
+
+.slide-in-right {
+  transform: translateX(50px);
+}
+
+.zoom-in {
+  transform: scale(0.9);
+}
+
+.slide-in-up {
+  transform: translateY(50px);
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: $main-color;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  @include transition(opacity 0.3s ease);
+
+  &:hover {
+    background-color: darken($main-color, 10%);
+  }
+
+  &.visible {
+    display: flex;
+  }
+
+  &.bounce {
+    animation: bounce 2s infinite;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}

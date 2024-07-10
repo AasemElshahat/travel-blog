@@ -1,0 +1,88 @@
+.explore {
+  padding: 50px 0;
+  text-align: center;
+  background-color: $section-background;
+
+  .explore-header {
+    margin-bottom: 30px;
+
+    .special-heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+
+  .post-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    .post {
+      position: relative;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 300px;
+      height: 500px;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        position: relative;
+        height: 100%; // Ensure the anchor tag takes the full height
+
+        img {
+          width: 100%;
+          height: 100%; // Ensure the image takes the full height
+          object-fit: cover; // Maintain aspect ratio and cover the entire area
+          display: block;
+          transition: transform 0.3s ease;
+        }
+
+        h3 {
+          position: absolute;
+          bottom: 15px;
+          left: 15px;
+          right: 15px;
+          font-size: 1.1rem;
+          margin: 0;
+          color: rgba(255, 255, 255, 0.9); // White shade when still
+          font-weight: 400;
+
+          z-index: 2; // Ensure the text is above the gradient
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 50%; // Adjust the height as needed
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0)
+          );
+          z-index: 1; // Ensure the gradient is below the text but above the image
+        }
+        &:hover img {
+          transform: scale(1.1);
+        }
+
+        &:hover .info::before {
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        }
+      }
+    }
+  }
+}
